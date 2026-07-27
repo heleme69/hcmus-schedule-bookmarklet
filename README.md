@@ -1,1 +1,1 @@
-.
+# HCMUS Schedule Bookmarklet
