@@ -6,14 +6,15 @@
   <title>HCMUS Schedule Sync Bookmarklet</title>
   <style>
     :root {
-      --bg-color: #141419; 
-      --text-main: rgba(255, 255, 255, 0.85);
-      --purple-accent: #8b5cf6;
-      --purple-glow: rgba(139, 92, 246, 0.35);
-      --purple-btn-bg: rgba(139, 92, 246, 0.18);
-      --purple-btn-border: rgba(139, 92, 246, 0.4);
-      --purple-btn-hover: rgba(139, 92, 246, 0.3);
-      --border-spec: rgba(255, 255, 255, 0.08);
+      --gh-bg: #0d1117;
+      --gh-text: #e6edf3;
+      --gh-text-muted: #8d96a0;
+      --gh-border: #30363d;
+
+      --violet-btn-bg: rgba(139, 92, 246, 0.18);
+      --violet-btn-border: rgba(139, 92, 246, 0.4);
+      --violet-btn-hover: rgba(139, 92, 246, 0.3);
+      --violet-glow: rgba(139, 92, 246, 0.35);
     }
 
     * {
@@ -23,9 +24,9 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+      background-color: var(--gh-bg);
+      color: var(--gh-text);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -37,9 +38,9 @@
 
     h1 {
       color: #ffffff;
-      font-size: 1.8rem;
+      font-size: 1.75rem;
       font-weight: 600;
-      letter-spacing: 0.5px;
+      letter-spacing: -0.2px;
       margin-bottom: 28px;
     }
 
@@ -52,41 +53,41 @@
     .instructions p {
       line-height: 1.8;
       margin: 10px 0;
-      color: rgba(255, 255, 255, 0.75);
+      color: var(--gh-text-muted);
       font-size: 0.95rem;
       text-align: left;
     }
 
     code {
       background: rgba(139, 92, 246, 0.15);
-      border: 1px solid rgba(139, 92, 246, 0.3);
-      color: #a78bfa;
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      color: var(--gh-text); /* Chữ trắng standard */
       padding: 2px 7px;
       border-radius: 6px;
-      font-family: monospace;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
       font-size: 0.85em;
     }
 
     .bookmarklet-btn {
       display: inline-block;
-      padding: 13px 32px;
-      background: var(--purple-btn-bg);
-      color: var(--text-main);
-      border: 1px solid var(--purple-btn-border);
+      padding: 12px 28px;
+      background: var(--violet-btn-bg);
+      color: var(--gh-text);
+      border: 1px solid var(--violet-btn-border);
       font-weight: 500;
-      font-size: 1rem;
+      font-size: 0.95rem;
       text-decoration: none;
-      border-radius: 12px;
+      border-radius: 8px;
       cursor: move;
-      transition: all 0.25s ease;
+      transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1);
     }
 
     .bookmarklet-btn:hover {
-      background: var(--purple-btn-hover);
-      color: #ffffff;
+      background: var(--violet-btn-hover);
       border-color: rgba(139, 92, 246, 0.6);
-      transform: translateY(-2px);
-      box-shadow: 0 0 12px var(--purple-glow);
+      color: #ffffff;
+      transform: translateY(-1px);
+      box-shadow: 0 0 12px var(--violet-glow);
     }
   </style>
 </head>
@@ -100,8 +101,8 @@
     <p>b3. Kéo chuột vào thanh Bookmark của trình duyệt</p>
     <p>b4. Tới mục Kết Quả ĐKHP của Portal</p>
     <p>b5. Bấm vào bookmark bạn đã tạo ở bước 2</p>
-    <p style="text-align: center; margin-top: 16px; color: rgba(255, 255, 255, 0.85);">Xong :D</p>
-    <hr style="border: 0; border-top: 1px solid var(--border-spec); margin: 20px 0;">
+    <p style="text-align: center; margin-top: 16px; color: var(--gh-text);">Xong :D</p>
+    <hr style="border: 0; border-top: 1px solid var(--gh-border); margin: 20px 0;">
     <p><strong>Kết quả:</strong> Tự động export file <code>.ics</code>, dùng vào Google/Apple/Outlook Calendar.</p>
   </div>
 
