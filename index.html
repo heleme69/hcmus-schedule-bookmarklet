@@ -6,12 +6,15 @@
   <title>HCMUS Schedule Sync Bookmarklet</title>
   <style>
     :root {
-      --neon-accent: #00ff96;
-      --text-main: #ffffff;
+      --purple-accent: #8b5cf6;
+      --purple-glow: rgba(139, 92, 246, 0.35);
+      --purple-btn-bg: rgba(139, 92, 246, 0.18);
+      --purple-btn-border: rgba(139, 92, 246, 0.4);
+      --purple-btn-hover: rgba(139, 92, 246, 0.3);
+      --text-main: rgba(255, 255, 255, 0.85);
       --card-bg: rgba(20, 20, 25, 0.55);
       --panel-blur: blur(12px) saturate(130%);
       --border-spec: rgba(255, 255, 255, 0.08);
-      --glow-shadow: rgba(0, 255, 150, 0.25);
     }
 
     * {
@@ -34,14 +37,14 @@
     }
 
     h1 {
-      color: var(--text-main);
+      color: #ffffff;
       font-size: 1.8rem;
       font-weight: 600;
       letter-spacing: 0.5px;
       margin-bottom: 24px;
     }
 
-    /* Khung Glassmorphism lấy theo đúng style Bio Card */
+    /* Khung Glassmorphism với viền & thông số thẻ chuẩn Bio */
     .instructions {
       background: var(--card-bg);
       backdrop-filter: var(--panel-blur);
@@ -64,41 +67,40 @@
     }
 
     .instructions p strong {
-      color: var(--text-main);
+      color: #ffffff;
     }
 
     code {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid var(--border-spec);
-      color: var(--neon-accent);
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      color: #a78bfa;
       padding: 2px 7px;
       border-radius: 6px;
       font-family: monospace;
       font-size: 0.85em;
     }
 
-    /* Nút Bookmarklet phối màu Neon Accent */
+    /* Nút Bookmarklet áp dụng chuẩn xác phối màu Tím bạn cung cấp */
     .bookmarklet-btn {
       display: inline-block;
       padding: 13px 32px;
-      background: rgba(0, 255, 150, 0.12);
-      color: var(--neon-accent);
-      border: 1px solid rgba(0, 255, 150, 0.4);
-      font-weight: 600;
+      background: var(--purple-btn-bg);
+      color: var(--text-main);
+      border: 1px solid var(--purple-btn-border);
+      font-weight: 500;
       font-size: 1rem;
       text-decoration: none;
-      border-radius: 9999px;
-      cursor: move; /* Con trỏ dạng kéo thả */
+      border-radius: 12px;
+      cursor: move;
       transition: all 0.25s ease;
-      box-shadow: 0 0 16px rgba(0, 255, 150, 0.15);
     }
 
     .bookmarklet-btn:hover {
-      background: rgba(0, 255, 150, 0.25);
-      border-color: var(--neon-accent);
+      background: var(--purple-btn-hover);
       color: #ffffff;
+      border-color: rgba(139, 92, 246, 0.6);
       transform: translateY(-2px);
-      box-shadow: 0 0 24px var(--glow-shadow);
+      box-shadow: 0 0 12px var(--purple-glow);
     }
   </style>
 </head>
@@ -112,7 +114,7 @@
     <p><strong>B3.</strong> <strong>Kéo chuột vào thanh Bookmark</strong> của trình duyệt</p>
     <p><strong>B4.</strong> Tới mục <strong>Kết Quả ĐKHP</strong> của Portal</p>
     <p><strong>B5.</strong> Bấm vào <strong>bookmark</strong> bạn đã tạo ở bước 2</p>
-    <p style="text-align: center; margin-top: 14px; font-weight: 500; color: rgba(255, 255, 255, 0.9);">Xong :D</p>
+    <p style="text-align: center; margin-top: 14px; font-weight: 500; color: #ffffff;">Xong :D</p>
     <hr style="border: 0; border-top: 1px solid var(--border-spec); margin: 16px 0;">
     <p><strong>Kết quả:</strong> Tự động export file <code>.ics</code>, dùng vào Google/Apple/Outlook Calendar.</p>
   </div>
