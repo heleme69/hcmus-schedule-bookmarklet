@@ -1,0 +1,12 @@
+{
+  "name": "hcmus-schedule-bookmarklet",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --minify --format=iife --outfile=dist/bookmarklet.min.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1"
+  }
+}
